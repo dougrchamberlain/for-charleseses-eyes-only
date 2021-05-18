@@ -1,10 +1,14 @@
 <mat-sidenav-container class="example-container">
-  <mat-sidenav opened [fixedInViewport]="true" [fixedBottomGap]="true" [fixedTopGap]="true">
+  <mat-sidenav #sidenav [fixedBottomGap]="true" [fixedTopGap]="true" [mode]="'side'">
+    <button mat-button (click)="sidenav.toggle()">
+      Toggle
+    </button>
     <document-list></document-list>
   </mat-sidenav>
 
   <mat-sidenav-content>
     <section>
+      <button (click)="sidenav.toggle()" mat-button>Toggle</button>
       <summary-document-detail>
 
       </summary-document-detail>

@@ -19,7 +19,7 @@ export class PatientDocumentsService extends ObservableStore<StoreState> {
     super({ trackStateHistory: true });
     const initialState: StoreState = {
       documents: [],
-      document: { PDFUrl: '', description: '', subtype: '', type: '' }
+      document: { url: '', description: '', subtype: '', type: '' }
     };
     this.setState(initialState, 'INIT_STATE');
   }
