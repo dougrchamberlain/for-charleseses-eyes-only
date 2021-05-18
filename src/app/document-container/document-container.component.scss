@@ -1,4 +1,4 @@
-@import "~@angular/material/theming";
+@import '~@angular/material/theming';
 
 @mixin document-container-color($config-or-theme) {
   // Extract the color configuration in case a theme has been passed.
@@ -20,6 +20,7 @@
       weight: mat-font-weight($config, body-1);
     }
   }
+  height: fit-content;
 }
 
 @mixin document-container-theme($theme) {
