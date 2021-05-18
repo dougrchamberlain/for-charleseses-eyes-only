@@ -1,0 +1,15 @@
+<mat-accordion *ngFor="let groups of documents | groupBy:'type'">
+    <mat-expansion-panel expanded="false" (afterCollapse)="typeCollapsed(groups.key)"
+        (afterExpand)="typeExpanded(groups.key)">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <div mat-hint>{{groups.key}}</div>
+            </mat-panel-title>
+
+        </mat-expansion-panel-header>
+        <mat-nav-list fxLayout="column">
+            <a fxFlex mat-button *ngFor="let doc of groups.value" (click)="onDocumentClick(doc)">
+                {{doc.description}} {{doc.subtype}}</a>
+        </mat-nav-list>
+    </mat-expansion-panel>
+</mat-accordion>
