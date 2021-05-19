@@ -1,6 +1,6 @@
 {
   "name": "nextech-icp-documents",
-  "version": "2.1.0-alpha",
+  "version": "1.0.1-alpha",
   "description": "Documents Module",
   "types": "index.d.ts",
   "repository": {
