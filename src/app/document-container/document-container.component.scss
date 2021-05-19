@@ -36,3 +36,7 @@
     @include document-container-typography($typography);
   }
 }
+
+:host {
+  height: 100vh;
+}

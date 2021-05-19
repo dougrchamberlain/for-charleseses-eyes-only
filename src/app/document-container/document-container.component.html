@@ -8,10 +8,15 @@
 
   <mat-sidenav-content>
     <section>
-      <button (click)="sidenav.toggle()" mat-button>Toggle</button>
-      <summary-document-detail>
+      <nav mat-tab-nav-bar>
+        <button mat-tab-link (click)="sidenav.toggle()" mat-button>Toggle</button>
+        <a mat-tab-link [routerLink]="'./edit'" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">
+          <mat-icon>edit</mat-icon>
+        </a>
+      </nav>
 
-      </summary-document-detail>
+      <router-outlet></router-outlet>
+
     </section>
   </mat-sidenav-content>
 </mat-sidenav-container>

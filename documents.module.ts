@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxDocViewerModule } from 'ngx-doc-viewer';
 import { PatientDocumentsService } from './src/app/documents-service/documents-api.service';
 import { TelemetryService } from './src/app/telemetry.service';
+import { DocumentEditComponent } from './src/app/document-edit/document-edit.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { TelemetryService } from './src/app/telemetry.service';
     DocumentDetailComponent,
     DocumentListComponent,
     DocumentReviewComponent,
+    DocumentEditComponent,
     GroupByPipe
   ],
   imports: [
