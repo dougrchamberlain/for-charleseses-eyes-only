@@ -5,6 +5,7 @@ import { ObservableStore } from '@codewithdan/observable-store';
 import { PatientDocument } from '../interfaces/patient-document';
 import * as jmsepath from 'jmespath';
 import { Observable } from 'rxjs/dist/types';
+//we can move app insights in here. and remove a lot of injections through out the app
 
 /**
  * @title DocumentsService
@@ -38,6 +39,7 @@ export class PatientDocumentsService extends ObservableStore<StoreState> {
           environment.jmesPathSearchString
         );
         this.setState({ documents }, StoreActions.GetDocuments);
+        this.setState({ document: documents[0] }, StoreActions.selectDocument);
       }
     });
     return o$;
@@ -55,5 +57,6 @@ export enum StoreActions {
   AddDocument = 'ADD_DOCUMENTS',
   RemoveDocument = 'REMOVE_DOCUMENTS',
   GetDocuments = 'GET_DOCUMENTS',
-  SortDocuments = 'SORT_DOCUMENTS'
+  SortDocuments = 'SORT_DOCUMENTS',
+  selectDocument = 'SELECT_DOCUMENT'
 }
