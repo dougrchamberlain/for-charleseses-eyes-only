@@ -195,12 +195,3 @@ $nx-dark-theme: mat-dark-theme(
   mat-palette($mat-purple)
 );
 @include angular-material-theme($nx-dark-theme);
-
-html,
-body {
-  height: 100%;
-}
-body {
-  margin: 0;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
-}
